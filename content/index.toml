@@ -1,0 +1,21 @@
+[general]
+linkedin = "LinkedIn"
+github = "https://github.com/17twenty"
+email = "nick@curiola.com"
+
+[[post]]
+pub_date = "26 July 2024"
+article = "2024-07-22.md"
+image = "https://external-preview.redd.it/weve-seen-35-minutes-of-deadpool-wolverine-and-its-going-to-v0-EMJmlU6KvJ-t6v_0cEC0RJaw-q8OjInwcgxGNCVCmck.jpg?width=640&crop=smart&auto=webp&s=34cdb556dd40db5ad0827f2250c9811399181da7"
+title = "Wolverine & Deadpool"
+subtitle = "Movie of the year?"
+
+# https://toml.io/en/v1.0.0#table
+# https://xuri.me/toml-to-go/
+
+[[post]]
+pub_date = "25 July 2024"
+article = "2024-07-22.md"
+image = "https://images.wallpapersden.com/image/download/amazing-road-hd_bWhnZmiUmZqaraWkpJRraWWtaW1l.jpg"
+title = "Mystery Magic"
+subtitle = "Time to escape"

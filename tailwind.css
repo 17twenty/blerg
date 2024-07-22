@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+div.cutout {
+  background: white;
+  padding: 20px;
+  border-radius: 0px 20px 0px 0px;
+}
+
+div.cutout:before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background: transparent;
+
+  /* border-radius of pseudo element */
+  border-bottom-left-radius: 50%;
+
+  /* box shadow to give the shadow of the pseudo-element the same color as the background */
+  box-shadow: 0 20px 0 0 white;
+}
+
+div.cutout::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  height: 40px;
+  width: 40px;
+  right: -40px;
+  background: transparent;
+
+  /* border-radius of pseudo element */
+  border-bottom-left-radius: 50%;
+
+  /* box shadow to give the shadow of the pseudo-element the same color as the background */
+  box-shadow: 0 20px 0 0 white;
+}
