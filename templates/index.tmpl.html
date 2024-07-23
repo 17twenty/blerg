@@ -1,5 +1,9 @@
+<!DOCTYPE html>
 <html>
-  <head>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Curiola | A Digital Products Consultancy - AWS, Linux, Golang, Python and Training</title>
     <link href="main.css" rel="stylesheet" />
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -41,15 +45,16 @@
       </header>
       <div class="m-auto flex w-screen max-w-screen-lg flex-wrap">
         {{ range . }}
-        <a href="/{{ replace .Article `.md` `.html` }}" class="m-5 min-w-96 grow rounded-2xl bg-white p-3 shadow-xl transition duration-200 overflow-clip {{ randomEffect }}">
-          <div class="relative m-2 h-96 w-auto rounded-2xl bg-[url({{ .Image }})] bg-cover bg-center bg-no-repeat">
-            <div class="cutout absolute bottom-0">
-              <p class="text-xs font-normal text-gray-500">{{ .PubDate }}</p>
-              <h1 class="text-2xl font-bold">{{ .Title }}</h1>
-              <h2 class="text-normal overflow-ellipsis text-gray-600">{{ .Subtitle }}</h2>
+          <a href="/{{ replace .Article `.md` `.html` }}" class="m-5 grow flex flex-col justify-center rounded-2xl bg-white shadow-xl transition duration-200  {{ randomEffect }} md:w-1/3">
+                <div class="relative items md:m-4 m-2 overflow-clip rounded-2xl h-full">
+                    <img class="w-full h-full object-fill shrink object-center" src="{{ .Image }}" />
+              <div class="cutout absolute bottom-0">
+                <p class="text-xs font-normal text-gray-500">{{ .PubDate }}</p>
+                <h1 class="md:text-2xl text-xl font-bold">{{ .Title }}</h1>
+                <h2 class="md:text-normal text-sm overflow-ellipsis text-gray-600">{{ .Subtitle }}</h2>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
         {{ end }}
       </div>
       <footer class="mt-12 min-h-3 md:bottom-0 md:fixed w-screen bg-gray-800 text-gray-300">

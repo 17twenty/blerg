@@ -31,6 +31,8 @@ func generateOutput() {
 	// Wipe and recreate the output folder
 	os.RemoveAll("./output")
 	os.Mkdir("./output", 0775)
+	os.Mkdir("./output/static", 0775)
+	// os.CopyFS(destDir, os.DirFS(srcDir))
 	var err error
 	// Grab the pages and header images from the index.toml and create an index.html
 	if _, err := os.Stat("./content/index.toml"); err != nil {
